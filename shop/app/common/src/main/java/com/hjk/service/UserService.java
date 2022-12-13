@@ -76,9 +76,10 @@ public class UserService {
     public void bulkRegister() {
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
-            for(int i = 0; i < 10000; i++) {
+            for(int i = 1; i <= 100; i++) {
                 String email = "test" + i + "gmail.com";
-                User user = User.builder().email(email).password("test1234").build();
+                String name = "테스트" + i;
+                User user = User.builder().email(email).password("test1234").name(name).build();
                 userRepository.save(user);
             }
             stopWatch.stop();

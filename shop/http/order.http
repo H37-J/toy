@@ -11,7 +11,7 @@ Content-Type: application/json
 {
   "productCount": 1,
   "userId": 1,
-  "productId": 11
+  "productId": 1
 }
 
 ###
