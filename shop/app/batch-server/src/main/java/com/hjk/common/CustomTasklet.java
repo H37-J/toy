@@ -10,10 +10,10 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Configuration
-public class CustomTasklet implements Tasklet{
+public class CustomTasklet implements Tasklet {
     
     @Override
-    public RepeatStatus execute(StepContribution contribution,ChunkContext chunkContext) throws Exception{
+    public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception{
         log.info("Tasklet 실행");
         return RepeatStatus.FINISHED;
     }

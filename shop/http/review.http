@@ -1,8 +1,8 @@
-GET http://localhost:8080/api/shop/review/get/11
+GET http://localhost:8082/api/shop/review/get/11
 
 
 ###
-POST http://localhost:8080/api/shop/review/save
+POST http://localhost:8082/api/shop/review/save
 Content-Type: application/json
 
 {

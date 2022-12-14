@@ -1,17 +1,17 @@
-GET http://localhost:8080/api/shop/product/list
+GET http://localhost:8082/api/shop/product/list
 
 ###
-GET http://localhost:8080/api/shop/product/page/list?page=1&size=10&direction=DESC
+GET http://localhost:8082/api/shop/product/page/list?page=1&size=10&direction=DESC
 
 ###
-GET http://localhost:8080/api/shop/product/get/bestProduct
+GET http://localhost:8082/api/shop/product/get/bestProduct
 
 
 ###
-GET http://localhost:8080/api/shop/product/search/list?mainCategory=MAN&subCategory=TOP&direction=DESC&page=1&size=10
+GET http://localhost:8082/api/shop/product/search/list?mainCategory=MAN&subCategory=TOP&direction=DESC&page=1&size=10
 
 ###
-POST http://localhost:8080/api/shop/product/upload
+POST http://localhost:8082/api/shop/product/upload
 Content-Type: application/json
 
 {
@@ -26,7 +26,7 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:8080/api/shop/product/update/1
+PATCH http://localhost:8082/api/shop/product/update/1
 Content-Type: application/json
 
 {
@@ -38,4 +38,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:8080/api/shop/product/delete/1
+DELETE http://localhost:8082/api/shop/product/delete/1

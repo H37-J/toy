@@ -1,7 +1,7 @@
-GET http://localhost:8080/api/shop/likes/get/1
+GET http://localhost:8082/api/shop/likes/get/1
 
 ###
-POST http://localhost:8080/api/shop/likes/save
+POST http://localhost:8082/api/shop/likes/save
 Content-Type: application/json
 
 {
@@ -10,4 +10,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:8080/api/shop/likes/delete/7
+DELETE http://localhost:8082/api/shop/likes/delete/7

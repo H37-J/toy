@@ -29,11 +29,6 @@ public class UserController {
         return CommonResult.success(userService.findAll());
     }
 
-    @RequestMapping(value = "/bulk/register", method = RequestMethod.GET)
-    public void bulkRegister() {
-        userService.bulkRegister();
-    }
-
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public CommonResult<UserDto.Response> register(@Valid @RequestBody UserDto.registerRequestDto request, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {

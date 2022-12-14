@@ -14,8 +14,8 @@ public class UserTest {
     @Autowired
     private UserService userService;
 
-    @Test
-    public void bulkRegister() {
-        userService.bulkRegister();
-    }
+//    @Test
+//    public void bulkRegister() {
+//        userService.bulkRegister();
+//    }
 }

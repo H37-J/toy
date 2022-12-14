@@ -1,8 +1,8 @@
-GET http://localhost:8080/api/shop/user/list
+GET http://localhost:8082/api/shop/user/list
 
 
 ###
-POST http://localhost:8080/api/shop/user/register
+POST http://localhost:8082/api/shop/user/register
 Content-Type: application/json
 
 {
@@ -12,7 +12,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:8080/api/shop/user/login
+POST http://localhost:8082/api/shop/user/login
 Content-Type: multipart/form-data; boundary=WebAppBoundary
 
 --WebAppBoundary
@@ -28,7 +28,7 @@ Content-Type: text/plain
 test1234
 
 ###
-PATCH http://localhost:8080/api/shop/user/update/1
+PATCH http://localhost:8082/api/shop/user/update/1
 Content-Type: application/json
 
 {
@@ -38,10 +38,10 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8080/api/shop/user/logout
+GET http://localhost:8082/api/shop/user/logout
 
 ###
-PATCH  http://localhost:8080/api/shop/user/update/admin/2
+PATCH  http://localhost:8082/api/shop/user/update/admin/2
 
 ###
-DELETE  http://localhost:8080/api/shop/user/delete/1
+DELETE  http://localhost:8082/api/shop/user/delete/1

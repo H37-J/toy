@@ -1,9 +1,8 @@
-
 spring:
   application:
     name: Shop
   datasource:
-    url: jdbc:mysql://localhost:3306/toyshop?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/toyshop?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8&rewriteBatchedStatements=true
     username: root
     password: star8903
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -18,6 +17,10 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         format_sql: true
+        jdbc:
+          batch_size: 20000
+        order_updates: true
+        order_inserts: true
     generate-ddl: true
     hibernate:
       ddl-auto: update
@@ -37,4 +40,4 @@ spring:
       max-request-size: 10MB
 
 server:
-  port: 8080
+  port: 8082

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StopWatch;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -73,15 +74,17 @@ public class UserService {
         return userToBeUpdated.toResponseDto();
     }
 
-    public void bulkRegister() {
+    public void bulkRegister(List<User> users) {
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
-            for(int i = 1; i <= 100; i++) {
-                String email = "test" + i + "gmail.com";
-                String name = "테스트" + i;
-                User user = User.builder().email(email).password("test1234").name(name).build();
-                userRepository.save(user);
-            }
+//        List<User> users = new ArrayList<>();
+//            for(int i = 1; i <= 100000; i++) {
+//                String email = "test" + i + "gmail.com";
+//                String name = "테스트" + i;
+//                User user = User.builder().email(email).password("test1234").name(name).build();
+//                users.add(user);
+//            }
+        userRepository.saveAll(users);
             stopWatch.stop();
             System.out.println("실행시간: " + stopWatch.getTotalTimeMillis() + "ms");
         }

@@ -1,8 +1,8 @@
-GET http://localhost:8080/api/shop/cart/get/1
+GET http://localhost:8082/api/shop/cart/get/1
 
 
 ###
-POST http://localhost:8080/api/shop/cart/save
+POST http://localhost:8082/api/shop/cart/save
 Content-Type: application/json
 
 {
@@ -12,5 +12,5 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:8080/api/shop/cart/delete/1
+DELETE http://localhost:8082/api/shop/cart/delete/1
 
