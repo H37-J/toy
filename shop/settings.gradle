@@ -2,3 +2,8 @@ rootProject.name = 'shop'
 include 'app:api-server'
 include 'app:common'
 include 'app:batch-server'
+include 'app:selenium-server'
+findProject(':app:selenium-server')?.name = 'selenium-server'
+include 'app:jsoup-server'
+findProject(':app:jsoup-server')?.name = 'jsoup-server'
+

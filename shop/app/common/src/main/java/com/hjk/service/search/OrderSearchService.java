@@ -17,11 +17,9 @@ import java.util.Objects;
 
 @Service
 public class OrderSearchService extends QuerydslRepositorySupport {
-
     public OrderSearchService() {
         super(Orders.class);
     }
-
 
     public PageDto<OrderDto.Response> search(Long id, Pageable pageable) {
         QOrders order = QOrders.orders;

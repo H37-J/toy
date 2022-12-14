@@ -50,16 +50,14 @@ public class UserJobConfig {
     private final EntityManagerFactory entityManagerFactory;
 
     private final CustomJobListener customJobListener;
-
     private final Integer CHUNK_SIZE = 10000;
 
     private final Integer PAGE_SIZE = 10;
-
     private final Integer CORE_POOL_SIZE = 20;
     private final Integer MAX_POOL_SIZE = 50;
     private final Integer QUEUE_POOL_SIZE = 50;
-
     private final UserRepository userRepository;
+
     private final UserService userService;
     @Bean
     public Job job() throws Exception {
