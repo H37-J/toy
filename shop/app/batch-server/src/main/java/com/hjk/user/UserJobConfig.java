@@ -68,13 +68,22 @@ public class UserJobConfig {
     @Bean
     public Step step1() throws Exception {
         return stepBuilderFactory.get("UserStep")
-                .<User, User>chunk(CHUNK_SIZE)
+                .<User, Future<User>>chunk(CHUNK_SIZE)
                 .reader(reader())
-                .processor(processor())
-                .writer(writer())
-                .taskExecutor(asyncTaskExecutor())
-                .throttleLimit(CORE_POOL_SIZE)
+                .processor(asyncProcessor())
+                .writer(asyncItemWriter())
                 .build();
+    }
+
+    @Bean
+    public TaskExecutor asyncTaskExecutor() {
+        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        executor.setCorePoolSize(CORE_POOL_SIZE);
+        executor.setMaxPoolSize(MAX_POOL_SIZE);
+        executor.setThreadNamePrefix("-멀티스레드-");
+        executor.setQueueCapacity(QUEUE_POOL_SIZE);
+        executor.initialize();
+        return executor;
     }
 
     @Bean
@@ -99,19 +108,6 @@ public class UserJobConfig {
             }
         };
     }
-
-    @Bean
-    public TaskExecutor asyncTaskExecutor() {
-        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setCorePoolSize(CORE_POOL_SIZE);
-        executor.setMaxPoolSize(MAX_POOL_SIZE);
-        executor.setThreadNamePrefix("-멀티스레드-");
-        executor.setQueueCapacity(QUEUE_POOL_SIZE);
-        executor.initialize();
-        return executor;
-    }
-
-
     @Bean
     public AsyncItemProcessor<User, User> asyncProcessor() throws Exception {
         AsyncItemProcessor<User, User> asyncItemProcessor = new AsyncItemProcessor<>();
