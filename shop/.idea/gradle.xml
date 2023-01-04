@@ -17,8 +17,18 @@
             <option value="$PROJECT_DIR$/app/api-server" />
             <option value="$PROJECT_DIR$/app/batch-server" />
             <option value="$PROJECT_DIR$/app/common" />
-            <option value="$PROJECT_DIR$/app/jsoup-server" />
             <option value="$PROJECT_DIR$/app/selenium-server" />
+            <option value="$PROJECT_DIR$/app/work" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/work" />
+        <option name="gradleJvm" value="azul-17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/work" />
           </set>
         </option>
       </GradleProjectSettings>
