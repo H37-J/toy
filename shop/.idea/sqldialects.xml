@@ -3,6 +3,5 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/app/api-server/src/test/resources/database/order.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/app/api-server/src/test/resources/database/user.sql" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/app/work/src/main/resources/sql/work.sql" dialect="GenericSQL" />
   </component>
 </project>

@@ -1,0 +1,21 @@
+spring:
+  devtools:
+    livereload:
+      enabled: true
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=APT_TAX;encrypt=true;trustServerCertificate=true
+    username: sa
+    password: Star8903!@
+  freemarker:
+    cache: false
+  jpa:
+    databasePlatform: org.hibernate.dialect.SQLServerDialect
+    database: SQL_SERVER
+    openInView: false
+    showSql: true
+#    generate-ddl: true
+#    hibernate:
+#      ddl-auto: update
+server:
+  port: 8086

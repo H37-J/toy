@@ -1,0 +1,81 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.0.1'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.hjk'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web-services'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-devtools'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-batch'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+    //AOP
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+
+    //Database
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'mysql:mysql-connector-java'
+    implementation 'com.h2database:h2:1.4.194'
+    implementation 'commons-dbcp:commons-dbcp:1.4'
+    implementation 'com.microsoft.sqlserver:mssql-jdbc'
+
+    //csv
+    implementation 'com.opencsv:opencsv:5.7.1'
+
+    //Websocket
+    implementation "javax.websocket:javax.websocket-api:1.1"
+
+    //Json
+    implementation 'com.google.code.gson:gson'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml'
+
+    //Lombok
+    implementation 'org.projectlombok:lombok'
+
+    //money
+    implementation 'org.joda:joda-money:1.0.1'
+
+    //Test
+    implementation 'junit:junit:4.13'
+
+    //Time
+    implementation 'joda-time:joda-time:2.10.1'
+
+    //Swagger
+    implementation 'io.springfox:springfox-swagger2:2.9.2'
+
+    //Common
+    implementation 'commons-io:commons-io:2.5'
+
+    //etc
+    implementation 'cn.hutool:hutool-all:5.8.0'
+
+    annotationProcessor('org.projectlombok:lombok')
+    testAnnotationProcessor('org.projectlombok:lombok')
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
