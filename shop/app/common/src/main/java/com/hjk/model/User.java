@@ -17,58 +17,43 @@ import java.util.stream.Collectors;
 @Table(name = "user")
 @NoArgsConstructor
 public class User extends Base {
-
     @Column(name = "email", nullable = false, unique = true)
     private String email;
-
     @Column(name = "password", nullable = false)
     private String password;
-
     @Column(name = "name")
     private String name;
-
     @Column(name = "money")
     private Integer money;
-
     @Column(name = "role")
     @Enumerated(EnumType.STRING)
     private UserRole role;
-
     @Column(name = "basic_address")
     private String basicAddress;
-
     @Column(name = "detail_address")
     private String detailAddress;
-
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Cart> carts;
-
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Orders> orders;
-
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Review> reviews;
-
     public void encryptPassword(String password) {
         this.password = password;
     }
-
     public void updateAdmin() {
         this.role = UserRole.ADMIN;
     }
-
     public void moneyUp(Integer money) {
         this.money += money;
     }
     public void moneyMinus(Integer money) {
         this.money -= money;
     }
-
     public void addressUpdate(String basicAddress, String detailAddress) {
         this.basicAddress = basicAddress;
         this.detailAddress = detailAddress;
     }
-
     public void updateUser(UserDto.updateRequestDto request) {
         this.email = request.getEmail() == null ? this.email : request.getEmail();
         this.name = request.getName() == null ? this.name : request.getName();

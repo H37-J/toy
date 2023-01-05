@@ -40,13 +40,6 @@ public class CommonResult<T> {
         return failed(ResponseCode.NOT_FOUND.getMessage());
     }
 
-    public static <T> CommonResult<T> emailFailed(T data) {
-        return new CommonResult<T>(ResponseCode.EMAIL_NOT_MATCHED.getCode(), ResponseCode.EMAIL_NOT_MATCHED.getMessage(), data);
-    }
-
-    public static <T> CommonResult<T> passwordFailed(T data) {
-        return new CommonResult<T>(ResponseCode.PASSWORD_NOT_MATCHED.getCode(), ResponseCode.PASSWORD_NOT_MATCHED.getMessage(), data);
-    }
     public static <T> CommonResult<T> unAuthorized(T data) {
         return new CommonResult<T>(ResponseCode.UNAUTHORIZED.getCode(), ResponseCode.UNAUTHORIZED.getMessage(), data);
     }

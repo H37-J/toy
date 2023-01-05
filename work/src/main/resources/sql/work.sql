@@ -14,7 +14,7 @@ values  ('00507', '20220810', '3002', '1', '보통예금');
 insert into 가상테이블_엑셀업로드용3 (col1, col2, col3, col4, col5)
 values  ('00507', '20220810', '3002', '1', '보통예금');
 
-create table dbo.전표입력정보_리뉴얼
+create table 전표입력정보_리뉴얼
 (
     단지코드       varchar(5)  not null,
     전표일자       varchar(8)  not null,

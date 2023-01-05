@@ -12,11 +12,9 @@
         <module name="shop.app.common.test" />
         <module name="shop.app.selenium-server.main" />
         <module name="shop.app.api-server.test" />
-        <module name="shop.app.work.test" />
         <module name="shop.app.batch-server.test" />
         <module name="shop.app.api-server.main" />
         <module name="shop.app.common.main" />
-        <module name="shop.app.work.main" />
         <module name="shop.app.batch-server.main" />
         <module name="shop.app.main" />
         <module name="shop.app.selenium-server.test" />

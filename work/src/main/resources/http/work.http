@@ -1,14 +1,7 @@
-GET http://localhost:8086/api/work/chit/list
+GET http://localhost:8086/api/chit/list
 
 
 ###
-PATCH http://localhost:8086/api/work/chit/update
+PATCH http://localhost:8086/api/chit/update
 Content-Type: application/json
 
-{
-  "단지코드": "76881",
-  "전표일자": "20190826",
-  "전표번호": "5",
-  "상세순번": "3",
-  "표준계정과목": "test"
-}

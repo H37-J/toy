@@ -18,7 +18,6 @@
             <option value="$PROJECT_DIR$/app/batch-server" />
             <option value="$PROJECT_DIR$/app/common" />
             <option value="$PROJECT_DIR$/app/selenium-server" />
-            <option value="$PROJECT_DIR$/app/work" />
           </set>
         </option>
       </GradleProjectSettings>

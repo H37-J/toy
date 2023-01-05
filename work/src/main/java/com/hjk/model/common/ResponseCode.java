@@ -5,9 +5,7 @@ public enum ResponseCode {
     FAILED(500, "요청 실패 했습니다"),
     NOT_FOUND(404, "페이지가 없습니다"),
     UNAUTHORIZED(401, "인증되지 않았습니다"),
-    FORBIDDEN(403, "권한이 없습니다"),
-    EMAIL_NOT_MATCHED(500, "이메일이 일치 하지 않습니다"),
-    PASSWORD_NOT_MATCHED(500, "비밀번호가 일치 하지 않습니다");
+    FORBIDDEN(403, "권한이 없습니다");
 
     private final long code;
     private final String message;

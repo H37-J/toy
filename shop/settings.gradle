@@ -3,4 +3,4 @@ include 'app:api-server'
 include 'app:common'
 include 'app:batch-server'
 include 'app:selenium-server'
-include 'app:work'
+

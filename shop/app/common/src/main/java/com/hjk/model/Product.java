@@ -19,7 +19,6 @@ import java.util.stream.Collectors;
 @Table(name = "product")
 @NoArgsConstructor
 public class Product extends Base {
-
     @Column(name = "name")
     private String name;
 

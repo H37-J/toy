@@ -15,10 +15,9 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/work/chit")
+@RequestMapping("/api/chit")
 @RequiredArgsConstructor
 public class ChitController {
-
     private final ChitService chitService;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
@@ -27,7 +26,7 @@ public class ChitController {
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.PATCH)
-    public void update(@RequestBody ChitDto.updateRequestDto request) throws CsvValidationException, IOException {
-        chitService.update(request);
+    public CommonResult<List<ChitDto.Response>> update() throws CsvValidationException, IOException {
+        return CommonResult.success(chitService.update());
     }
 }
